@@ -2,30 +2,40 @@
 //
 
 #include "stdafx.h"
+#include "Sorting.h"
 #include <string>
 #include <iostream>
 
-int *BucketSort(int toSortArray[])
+
+AlgorithmCpp::Sorting::Sorting()
+{
+}
+
+AlgorithmCpp::Sorting::~Sorting()
+{
+}
+
+int *AlgorithmCpp::Sorting::BucketSort(int toSortArray[])
 {
 	return &toSortArray[0];
 }
 
-int *CountingSort(int toSortArray[])
+int *AlgorithmCpp::Sorting::CountingSort(int toSortArray[])
 {
 	return &toSortArray[0];
 }
 
-int *MergeSort(int toSortArray[])
+int *AlgorithmCpp::Sorting::MergeSort(int toSortArray[])
 {
 	return &toSortArray[0];
 }
 
-int *QuickSort(int toSortArray[])
+int *AlgorithmCpp::Sorting::QuickSort(int toSortArray[])
 {
 	return &toSortArray[0];
 }
 
-int *BubbleSort(int toSortArray[])
+int *AlgorithmCpp::Sorting::BubbleSort(int toSortArray[])
 {
 	int notSorted = true;
 	int tmp;
@@ -47,7 +57,7 @@ int *BubbleSort(int toSortArray[])
 	return &toSortArray[0];
 }
 
-int *SelectionSort(int toSortArray[])
+int *AlgorithmCpp::Sorting::SelectionSort(int toSortArray[])
 {
 	int exchangeIndex;
 	int tmp;
@@ -76,23 +86,3 @@ int *SelectionSort(int toSortArray[])
 
 	return &toSortArray[0];
 }
-
-int _tmain(int argc, _TCHAR* argv[])
-{
-	std::string input;
-	int values[11] = { 1, 4, 6, 7, 3, 45, 7653, 20, 5000, 42, 1 };
-	int arraySize = 11;
-
-	int *newArray = BubbleSort(values);
-
-	for (size_t i = 0; i < arraySize; i++)
-	{
-		std::cout << *(newArray + i) << std::endl;
-	}
-
-	std::cin >> input;
-	return 0;
-
-
-}
-
